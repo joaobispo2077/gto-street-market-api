@@ -1,0 +1,13 @@
+{
+  "requestContext": {
+    "authorizer": {
+      "claims": {
+        "sub": "1234abc"
+      }
+    }
+  },
+  "body": "{\"productDescription\":\"The slickest shoe to grace Middle Earth\",\"productName\":\"Off White Sneakers\",\"productPrice\":\"99.00\"}",
+  "pathParameters": {
+    "id": "XXXXXXXREPLACE_WITH_REAL_VALUEXXXXXXX"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "requestContext": {
+    "authorizer": {
+      "claims": {
+        "sub": "1234abc"
+      }
+    }
+  },
+  "body": "{\"productName\":\"Off White Sneakers\",\"productPrice\":\"99.00\"}"
+}

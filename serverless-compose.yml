@@ -1,0 +1,21 @@
+services:
+  api:
+    path: resources/api
+    params:
+      COGNITO_ARN: ${mainUserpool.UserPoolArn}
+  mainUserpool:
+    path: resources/cognito
+  items:
+    path: resources/dynamodb/items
+  street-market-pictures:
+    path: resources/s3/street-market-pictures
+  street-market:
+    params:
+      API_GATEWAY_REST_API_ID: ${api.ApiId}
+      API_GATEWAY_REST_API_ROOT_RESOURCE_ID: ${api.ApiResourceId}
+      USER_POOL_ID: ${mainUserpool.UserPoolId}
+      USER_POOL_CLIENT_ID: ${mainUserpool.UserPoolClientId}
+      AUTHORIZER_ID: ${api.AuthorizerId}
+      DYNAMODB_TABLE_ITEMS: ${items.DynamoDBTableName}
+      STREET-MARKET-PICTURES-BUCKET_NAME: ${street-market-pictures.S3BucketName}
+    path: services/street-market
